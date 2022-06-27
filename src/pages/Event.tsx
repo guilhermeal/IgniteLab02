@@ -17,6 +17,7 @@ export function Event() {
     <div className="flex flex-col min-h-screen">
       <Header
         onSidebarOpened={handleOpenSidebar}
+        sidebarOpened={sidebarOpened}
       />
       <main className="flex flex-1">
         {

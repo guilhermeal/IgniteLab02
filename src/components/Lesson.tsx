@@ -1,4 +1,4 @@
-import { CheckCircle, Lock } from 'phosphor-react';
+import { CaretLeft, CheckCircle, Lock } from 'phosphor-react';
 import { format, isPast } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import { Link, useParams } from 'react-router-dom';
@@ -31,6 +31,16 @@ export function Lesson(props: LessonProps) {
         className={classNames('rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500', {
           'bg-green-500': isActiveLesson
         })}>
+
+        {isActiveLesson && (
+          <CaretLeft 
+            className={classNames('left-1 absolute text-green-500 hidden lg:inline')}
+            size={32} 
+            weight="fill" 
+          />
+        )}
+
+
         <header className="flex items-center justify-between">
           {isLessonAvailable ? (
             <span 
