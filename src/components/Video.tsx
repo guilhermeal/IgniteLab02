@@ -37,7 +37,7 @@ export function Video(props: VideoProps) {
 
       <div className="p-8 max-w-[1199px] mx-auto">
 
-        <div className="flex items-start gap-16">
+        <div className="flex items-start gap-16 flex flex-col lg:flex-row">
           <div className="flex-1">
             <h1 className="text-2xl font-bold">
               {data.lesson.title}
@@ -63,20 +63,20 @@ export function Video(props: VideoProps) {
           </div>
 
           
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 w-full lg:w-[250px]">
             <a href="" className="p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors">
               <DiscordLogo size={24} />
               Comunidade do Discord
             </a>
 
-            <a href="" className="p-4 text-sm border border-blue-500 text-blue-500 flex items-center rounded font-bold uppercase gap-2 hover:bg-blue-500 hover:text-gray-900 transition-colors">
+            <a href="" className="p-4 text-sm border border-blue-500 text-blue-500 flex items-center rounded font-bold uppercase gap-2 hover:bg-blue-500 hover:text-gray-900 transition-colors justify-center">
               <Lightning size={24}/>
               Acesse o desafio
             </a>
           </div>
         </div>
 
-        <div className="gap-8 mt-20 grid grid-cols-2">
+        <div className="gap-8 mt-20 grid grid-rows-2 lg:grid-cols-2 lg:flex-row">
           <a href="" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
             <div className="bg-green-700 h-full p-6 flex items-center">
               <FileArrowDown size={40}/>
